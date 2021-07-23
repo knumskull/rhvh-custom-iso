@@ -1,19 +1,23 @@
 # Info: Configuration variables for build-iso.sh
-# Author: Jason Woods <jwoods@redhat.com>
-# Created: 2019-02-14
+# Author: Steffen Froemer <steffen@redhat.com>
+# Created: 2021-07-23
 
-# where to find/put stuff
-ISO_BASEDIR="/u/RHV-H_custom"
-ISO_BUILDDIR="BUILD"
-ISO_IN="${ISO_BASEDIR}/RHVH-4.2-20190117.0-RHVH-x86_64-dvd1.iso"
-ISO_OUT="RHVH-4.2-custom.x86_64.iso"
-ISO_MNTDIR="${ISO_BASEDIR}/temp-mnt"
-ISO_MODDIR="${ISO_BASEDIR}/modifications"
+# Path to working directory
+ISO_BASEDIR="/tmp/RHVH-custom"
+# filename of created RHV-H custom image
+ISO_OUT="RHVH-4.4-custom.x86_64.iso"
+
+# Path to the downloaded RHVH image from access.redhat.com (optional)
+# If not configured, the path can be transmitted during preparation process
+ISO_IN=""
 
 # these can be left auto-configured, or changed as desired
-ISO_OUTDIR="${ISO_BASEDIR}/${ISO_BUILDDIR}"
-ISO_OUTPUT="${ISO_BASEDIR}/${ISO_OUT}"
+ISO_SOURCEDIR="${ISO_BASEDIR}/SOURCE"
+ISO_BUILDDIR="${ISO_BASEDIR}/BUILD"
+ISO_MNTDIR="${ISO_BASEDIR}/temp-mnt"
+ISO_MODDIR="${ISO_BASEDIR}/modifications"
+ISO_OUTFILE="${ISO_BASEDIR}/${ISO_OUT}"
 
-# string to use when outputing a note
+# string to use when outputting a note
 ISO_NOTE="#-# "
 
